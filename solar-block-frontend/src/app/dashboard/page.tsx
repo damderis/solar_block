@@ -7,7 +7,6 @@ import SolarForecastDaily from "@/components/dashboard/solarForecast";
 import RevenueInsight from "@/components/dashboard/revenueInsight";
 import { Card, Col, Row } from 'antd';
 
-
 export const metadata: Metadata = {
   title: "Dashboard",
 };
