@@ -1,7 +1,7 @@
 'use client';
 import type { MenuProps } from 'antd';
 import { Layout, Menu, theme, Card, Button } from 'antd';
-import { BuildOutlined, ThunderboltOutlined, ProfileOutlined, MailOutlined, SettingOutlined, UserAddOutlined } from '@ant-design/icons';
+import { BuildOutlined, ThunderboltOutlined, UserOutlined, MailOutlined, SettingOutlined, UserAddOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
@@ -12,7 +12,7 @@ const { Sider, Content } = Layout;
 const items: MenuItem[] = [
   { key: '/dashboard', label: <Link className='text-md' href='/dashboard'>Dashboard</Link>, icon: <BuildOutlined /> },
   { key: '/marketplace', label: <Link className='text-md' href='/marketplace'>Marketplace</Link>, icon: <ThunderboltOutlined /> },
-  { key: '/', label: <Link className='text-md' href='/'>Profile</Link>, icon: <ProfileOutlined /> },
+  { key: '/', label: <Link className='text-md' href='/'>Profile</Link>, icon: <UserOutlined /> },
 ];
 
 interface PageName {
@@ -91,16 +91,9 @@ export default function LayoutApp({ children }: Readonly<{ children: React.React
           style={{ padding: '16px 0', background: '#F8F8FF', height: 'fill' }}
         />
       </Sider>
-      <Layout style={{ marginLeft: collapsed ? 80 : 200, background: '#F8F8FF' }}>
+      <Layout style={{ marginLeft: collapsed ? 80 : 200, background: '#F8F8FF', height: 'full' }}>
         <Content
-          style={{
-            margin: '16px 16px 16px',
-            background: 'none',
-            padding: 8,
-            minHeight: 280,
-            height: 'fill', // Adjust height to fill the remaining space
-            borderRadius: borderRadiusLG,
-          }}
+          className='flex flex-col h-screen rounded-md p-4'
         >
           <Card
             title={<span className='text-xl'>{getPageTitle(pathname)}</span>}

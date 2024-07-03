@@ -1,8 +1,9 @@
+import ProfileGrid from "@/components/profile/profileGrid"
 
-export default function Home(){
+export default function Profile(){
   return (
       <main>
-          <h1>Profile</h1>
+          <ProfileGrid />
       </main>
   )
 }
