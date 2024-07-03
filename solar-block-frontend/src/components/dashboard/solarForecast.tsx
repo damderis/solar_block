@@ -19,14 +19,14 @@ const SolarForecastDaily: React.FC = () => {
       title: 'Day',
       dataIndex: 'day',
       key: 'day',
-      align: 'center',
+      align: 'center' as 'center', // Explicitly cast to the expected type
       render: (text: string) => <Text style={{ fontSize: '16px' }}>{text}</Text>,
     },
     {
       title: 'Energy (kWh)',
       dataIndex: 'energy',
       key: 'energy',
-      align: 'center',
+      align: 'center' as 'center', // Explicitly cast to the expected type
       render: (text: number) => <Text style={{ fontSize: '16px' }}>{`${text} kWh`}</Text>,
     },
   ];
