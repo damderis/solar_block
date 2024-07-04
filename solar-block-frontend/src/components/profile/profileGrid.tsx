@@ -1,17 +1,17 @@
 'use client'
 import { useState } from 'react';
-import { Button, Input, Typography, Card } from 'antd';
+import { Button, Input, Typography} from 'antd';
 import { EditOutlined } from '@ant-design/icons';
 
 const { TextArea } = Input;
 const { Title } = Typography;
 
 const ProfileGrid = () => {
-  const [name, setName] = useState('John Doe');
+  const [name, setName] = useState('Faridul Farhan');
   const [address, setAddress] = useState('0x1234567890abcdef1234567890abcdef12345678');
-  const [userAddress, setUserAddress] = useState('123 Main St, Springfield');
-  const [phone, setPhone] = useState('123-456-7890');
-  const [email, setEmail] = useState('john.doe@example.com');
+  const [userAddress, setUserAddress] = useState('Seri Kembangan');
+  const [phone, setPhone] = useState('019-5656 98');
+  const [email, setEmail] = useState('farhan.selangor@gmail.com');
 
   return (
     <div className="flex flex-wrap p-4">

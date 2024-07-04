@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import React from 'react';
+import ExpSolar from "@/components/dashboard/expSolar";
 import ElectricSaved from "@/components/dashboard/electricSaved";
 import SolarAvailability from "@/components/dashboard/solarAvailability";
 import ElectricBill from "@/components/dashboard/electricBill";
@@ -14,8 +15,15 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <main className="flex flex-col">
-      <span className="text-lg font-semibold">Welcome back Faridul!</span>
-      <span  className="text-sm text-gray-500 font-normal mb-4">Here is your overview.</span>
+      <div className="flex justify-between">
+        <div className="flex flex-col">
+        <span className="text-lg font-semibold">Welcome back Faridul!</span>
+        <span  className="text-sm text-gray-500 font-normal mb-4">Here is your overview.</span>
+        </div>
+        <ExpSolar />
+      </div>
+      
+      
       <Row gutter={20} style={{ display: 'flex' }}>
         <Col span={16} style={{ display: 'flex', flexDirection: 'column' }}>
           <Row gutter={20} style={{ display: 'flex', flex: 1 }}>
@@ -32,7 +40,7 @@ export default function Page() {
             <Col span={12} style={{ display: 'flex', flexDirection: 'column' }}>
               <Card style={{ flex: 1 }} className='hover:scale-up'>
                 <div className="text-xl font-semibold mb-2 flex items-center">
-                Solar Availability
+                Sellable Energy Input
                 </div>
                 <SolarAvailability />
               </Card>

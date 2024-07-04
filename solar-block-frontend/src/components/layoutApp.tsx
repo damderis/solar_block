@@ -77,7 +77,7 @@ export default function LayoutApp({ children }: Readonly<{ children: React.React
         <div className='flex mt-6 justify-center items-center'>
           <img src='sglogo.svg' alt="Logo" className='w-12 h-12' />
           {!collapsed && <span className='ml-2 font-black text-3xl
-          bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400
+          bg-gradient-to-r from-blue-600 to-green-500
           inline-block text-transparent bg-clip-text
           '>SolGen</span>}
         </div>
