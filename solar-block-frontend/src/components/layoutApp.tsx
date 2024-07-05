@@ -1,7 +1,7 @@
 'use client';
 import type { MenuProps } from 'antd';
 import { Layout, Menu, theme, Card, Button } from 'antd';
-import { BuildOutlined, ThunderboltOutlined, UserOutlined, MailOutlined, SettingOutlined, UserAddOutlined } from '@ant-design/icons';
+import { BuildOutlined, ThunderboltOutlined, UserOutlined, MailOutlined, SettingOutlined, UserAddOutlined, SwapOutlined } from '@ant-design/icons';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
@@ -12,6 +12,7 @@ const { Sider, Content } = Layout;
 const items: MenuItem[] = [
   { key: '/dashboard', label: <Link className='text-md' href='/dashboard'>Dashboard</Link>, icon: <BuildOutlined /> },
   { key: '/marketplace', label: <Link className='text-md' href='/marketplace'>Marketplace</Link>, icon: <ThunderboltOutlined /> },
+  { key: '/exchange', label: <Link className='text-md' href='/exchange'>Exchange Currency</Link>, icon: <SwapOutlined /> },
   { key: '/', label: <Link className='text-md' href='/'>Profile</Link>, icon: <UserOutlined /> },
 ];
 
@@ -23,6 +24,7 @@ interface PageName {
 const pages: PageName[] = [
   { key: '/dashboard', label: 'Dashboard' },
   { key: '/marketplace', label: 'Marketplace' },
+  { key: '/exchange', label: 'Exchange Currency' },
   { key: '/', label: 'Profile' },
 ];
 
