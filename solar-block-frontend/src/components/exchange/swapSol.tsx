@@ -7,19 +7,19 @@ import Select from 'react-select';
 
 const SWAP_API_URL = 'https://api.jup.ag/v1/swap';
 const CONVERSION_RATES = {
-    RM: 0.000025, // Example conversion rate: 1 USDC = 0.000025 SOL
+    USDC: 0.000025, // Example conversion rate: 1 USDC = 0.000025 SOL
     ETH: 0.000015,  // Example conversion rate: 1 ETH = 0.000015 SOL
     BTC: 0.000005   // Example conversion rate: 1 BTC = 0.000005 SOL
 };
 const MINT_ADDRESSES = {
-    RM: 'EPjFWdd5AufqSSqeM2qKkXQFeWvTXh8u5spx6X3d7ZBe',
+    USDC: 'EPjFWdd5AufqSSqeM2qKkXQFeWvTXh8u5spx6X3d7ZBe',
     ETH: '2ndMintAddressForETH',
     BTC: '3rdMintAddressForBTC'
 };
 type CoinType = keyof typeof CONVERSION_RATES;
 
 const coinOptions = [
-    { value: 'RM', label: <div className='flex items-center gap-2'><p className='font-black text-lg'>USDC</p><img src="usdclogo.svg" alt="USDC Logo" className="w-1/6" /></div> },
+    { value: 'USDC', label: <div className='flex items-center gap-2'><p className='font-black text-lg'>RM</p><img src="usdclogo.svg" alt="USDC Logo" className="w-1/6" /></div> },
     { value: 'ETH', label: <div className='flex items-center gap-2'><p className='font-black text-lg'>ETH</p><img src="ethereumlogo.svg" alt="Ethereum Logo" className="w-1/12" /></div> },
     { value: 'BTC', label: <div className='flex items-center gap-2'><p className='font-black text-lg'>BTC</p><img src="bitcoinlogo.svg" alt="BTC Logo" className="w-1/5" /></div> }
 ];
