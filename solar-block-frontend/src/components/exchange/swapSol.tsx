@@ -91,8 +91,7 @@ const SwapSol: React.FC = () => {
         <div className="flex flex-col items-center justify-center">
             <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
                 <div className='flex gap-2 p-2 justify-center items-center'>
-                    <h1 className="text-2xl font-bold mb-4 text-center">Jupiter Swap</h1>
-                    <img src="jupiterlogo.svg" alt="Jupiter Logo" className="w-1/12" />
+                    <h1 className="text-2xl font-bold mb-4 text-center">Solana Exchange</h1>
                 </div>
                 <label className="block text-gray-700 text-sm font-bold mb-2">Paying</label>
                 <div className="flex justify-between mb-4 border border-gray-300 rounded p-2">
